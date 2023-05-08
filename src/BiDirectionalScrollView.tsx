@@ -19,9 +19,8 @@ import {
 import { BidirectionalFlatlist } from "./BidirectionalFlatlist";
 import type { ShiftFunction } from "./types";
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-const ScrollViewRNRaw: Component<ScrollViewProps> = ScrollViewRN.render().type;
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const ScrollViewRNRaw: Component<ScrollViewProps> = require("react-native/Libraries/Components/ScrollView/ScrollView");
 
 export class ScrollViewComponent extends ScrollViewRNRaw {
   constructor(props: ScrollViewProps) {
